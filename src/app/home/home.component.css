@@ -1,0 +1,52 @@
+.page {
+
+    background-color: yellowgreen;
+  }
+  
+  .header{
+      align-items: center;
+    /* background-color: red;*/
+     left: 50%;
+  }
+  .logo {
+    align-items: center;
+    height: 120;
+    font-weight: bold;
+   
+  }
+  .namepag {
+    horizontal-align: center;
+    font-size: 25;
+    font-weight: 600;
+    text-align: center;
+    color:forestgreen;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+ 
+  
+  .input-field {
+    margin-bottom: 25;
+  }
+  .input {
+    font-size: 18;
+    placeholder-color: #A8A8A8;
+  }
+  
+
+  .login-label {
+    horizontal-align: center;
+    color: #A8A8A8;
+    font-size: 16;
+  }
+  .sign-up-label {
+    margin-bottom: 20;
+  }
+  
+  .action-bar {
+    background-color: darkgreen;
+    background-size: cover;
+    color:white;
+    font-size: 14;
+    font-weight: bold;
+    vertical-align: center;
+}

@@ -1,0 +1,32 @@
+<ActionBar  class="action-bar" title="test" backgroud>
+	<StackLayout orientation="horizontal"
+	  horizontalAlignment="right">
+	  <Label text="Cristian Carreño" class="action-label"></Label>
+	</StackLayout>
+  </ActionBar>
+<FlexboxLayout class="page">
+	<StackLayout class="form">
+		<Image class="logo" src="~/app/images/logoTucan.png"></Image>
+		<Label class="header" text="INSTRUCOM"></Label>
+
+		<StackLayout class="input-field">
+			<TextField class="input" hint="Email" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="emailFormRegister" returnKeyType="next" (returnPress)="focusPassword()"></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+
+		<StackLayout class="input-field">
+			<TextField #password class="input" hint="Password" secure="true" [(ngModel)]="passFormRegister"></TextField>
+			<StackLayout class="hr-light"></StackLayout>
+		</StackLayout>
+		<Label text="Forgot your password?" class="login-label" (tap)="forgotPassword()"></Label>
+	
+
+		<Button text="Log In" [nsRouterLink]="['/home']" (tap)="login()" class="btnLogin"></Button>
+
+		<Label text="Don’t have an account?" class="login-label"  [nsRouterLink]="['/register']"></Label>
+
+	</StackLayout>
+
+	
+	
+</FlexboxLayout>
