@@ -1,49 +1,36 @@
-<ActionBar  class="action-bar"  backgroud>
-	<StackLayout orientation="horizontal"
-	  horizontalAlignment="right">
-	  <Label text="Cristian Carreño" class="action-label"></Label>
+<ActionBar class="action-bar" backgroud>
+	<StackLayout orientation="horizontal" horizontalAlignment="right">
+		<Label text="Cristian Carreño" class="action-label"></Label>
 	</StackLayout>
-  </ActionBar>
+</ActionBar>
 
-  
-<FlexboxLayout class="page">
+
+
+
 	<StackLayout class="header">
-        	<Label class="namepag" text="*HOME*"></Label>
+		<Label class="namepag" text="*HOME*"></Label>
 		<Image class="logo" src="~/app/images/logoTucan.png"></Image>
-	
+	</StackLayout>
+
+
+
 
 		<StackLayout horizontalAlignment="center" verticalAlignment="center">
-			<Image [src]="picture" width="200" height="200"></Image>
-			<Button text="Capture" (tap)="getCameraPermission()" class="btn btn-primary"></Button>
-	</StackLayout>
+		<Image [src]="picture" width="200" height="200"></Image>
+
+		<Label text="Etiqueta:"></Label>
+		<TextField [(ngModel)]="imagen.etiqueta"  class="input"></TextField>
+
+		<Button text="Capture" (tap)="getCameraPermission()" class="btn btn-primary"></Button>
+		<Button text="SUBIR" (tap)="subirFoto()" class="btn btn-primary"></Button>
 
 	</StackLayout>
-	<CollectionView row="1" [items]="items" colWidth="33%" rowHeight="100" [itemTemplateSelector]="templateSelector">
-    <ng-template cvTemplateKey="Defender" let-item="item" let-odd="odd">
-        <StackLayout [nsRouterLink]="['/item', item.id]" borderColor="blue" borderWidth="2" borderRadius="5" verticalAlignment="stretch" class="list-group-item" [class.odd]="odd">
-        <Label verticalAlignment="center" [text]="item.name" class="list-group-item-text" textWrap="true"></Label>
-        </StackLayout>
-    </ng-template>
- 
-    <ng-template cvTemplateKey="Goalkeeper" let-item="item" let-odd="odd">
-        <StackLayout [nsRouterLink]="['/item', item.id]" borderColor="black" borderWidth="2" borderRadius="5" verticalAlignment="stretch" class="list-group-item" [class.odd]="odd">
-        <Label verticalAlignment="center" [text]="item.name" class="list-group-item-text" textWrap="true"></Label>
-        </StackLayout>
-    </ng-template>
- 
-    <ng-template cvTemplateKey="Midfielder" let-item="item" let-odd="odd">
-        <StackLayout [nsRouterLink]="['/item', item.id]" borderColor="yellow" borderWidth="2" borderRadius="5" verticalAlignment="stretch" class="list-group-item" [class.odd]="odd">
-        <Label verticalAlignment="center" [text]="item.name" class="list-group-item-text" textWrap="true"></Label>
-        </StackLayout>
-    </ng-template>
- 
-    <ng-template cvTemplateKey="Forward" let-item="item" let-odd="odd">
-        <StackLayout [nsRouterLink]="['/item', item.id]" borderColor="red" borderWidth="2" borderRadius="5" verticalAlignment="stretch" class="list-group-item" [class.odd]="odd">
-        <Label verticalAlignment="center" [text]="item.name" class="list-group-item-text" textWrap="true"></Label>
-        </StackLayout>
-    </ng-template>
-</CollectionView>
-	
-	
-</FlexboxLayout>
-
+<!-- 
+    <WrapLayout [items]="items" colWidth="30%" rowHeight="100">
+        <ng-template let-item="item">
+          <StackLayout margin="10" [nsRouterLink]="['/item', item.id]" borderColor="blue" borderWidth="2" borderRadius="5" verticalAlignment="stretch" class="list-group-item" >
+            <Label verticalAlignment="center" [text]="item.value" class="list-group-item-text" textWrap="true"></Label>
+          </StackLayout>
+        </ng-template>
+      </WrapLayout>
+-->

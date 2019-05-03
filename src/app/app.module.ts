@@ -17,6 +17,7 @@ import { RegisterComponent } from "./login/register.component";
 import { HomeComponent } from "./home/home.component";
 import { CollectionViewModule } from 'nativescript-collectionview/angular';
 
+
 @NgModule({
     bootstrap: [
         AppComponent

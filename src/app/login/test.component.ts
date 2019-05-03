@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Service1 } from '../service';
 import { User } from '../model/User';
-import * as localStorage from 'nativescript-localstorage';
+
 import { alert, prompt } from "tns-core-modules/ui/dialogs";
+import * as appSettings from "tns-core-modules/application-settings";
 
 
 @Component({
@@ -26,23 +27,26 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    let user = new User("", this.pass, this.email);
-    console.log(this.pass + this.email);
+    let user = new User("", this.passFormRegister, this.emailFormRegister);
+    console.log("LOGIN!");
+    console.log(user);
     this.service.loginUsuario(user).subscribe(
       (respuesta) => {
-
-        if (respuesta["code"] === 1) {
+        console.log(respuesta);
+        if (respuesta["code"] === 1) { 
 
           console.log("ok -> " + respuesta["token"]);
-          localStorage.setItem("key", respuesta["token"]);
-          console.log(localStorage.getItem("key"));
+          appSettings.setString("token", respuesta["token"]);
+         
+          console.log(appSettings.getString("token"));
 
         } else {
           //"poner un toast en el movil"
           console.log("error de login")
         }
       }, (error: any) => {
-        console.log("error de server")
+        console.log("error de server");
+        console.log(error);
       }
 
 
