@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Service1 } from '../service';
-import { registerElement } from 'nativescript-angular/element-registry';
 
 
 @Component({
   selector: 'ns-test',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  templateUrl: './showImages.component.html',
+  styleUrls: ['./showImages.component.css'],
   moduleId: module.id,
 })
 
 
-export class HomeComponent implements OnInit {
+export class ShowImages implements OnInit {
  
   constructor(private service: Service1) {
   

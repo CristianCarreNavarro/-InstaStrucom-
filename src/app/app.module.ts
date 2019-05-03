@@ -15,9 +15,10 @@ import { Service1 } from "./service";
 import { LoginComponent } from "./login/test.component";
 import { RegisterComponent } from "./login/register.component";
 import { HomeComponent } from "./home/home.component";
+import { TakePicture } from "./takePicture/takePicture.component";
+import { ShowImages } from "./showImages/showImages.component";
 import { CollectionViewModule } from 'nativescript-collectionview/angular';
-
-
+import { GifModule } from 'tns-ng-gif';
 @NgModule({
     bootstrap: [
         AppComponent
@@ -27,7 +28,8 @@ import { CollectionViewModule } from 'nativescript-collectionview/angular';
         AppRoutingModule,
         NativeScriptFormsModule,
         NativeScriptHttpClientModule,
-        CollectionViewModule
+        CollectionViewModule,
+        GifModule
       
     ],
     declarations: [
@@ -36,7 +38,9 @@ import { CollectionViewModule } from 'nativescript-collectionview/angular';
         ItemDetailComponent,
         LoginComponent,
         RegisterComponent,
-        HomeComponent
+        HomeComponent,
+        TakePicture,
+        ShowImages
     ],
     providers: [Service1],
     schemas: [

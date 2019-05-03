@@ -8,20 +8,19 @@
 
 
 	<StackLayout class="header">
-		<Label class="namepag" text="*HOME*"></Label>
+		<Label class="namepag" text="*TAKE PICTURE*"></Label>
 		<Image class="logo" src="~/app/images/logoTucan.png"></Image>
 	</StackLayout>
-	<StackLayout horizontalAlignment="center" verticalAlignment="center">
-  <Image [tnsGif] src="https://www.gifmania.com/Gif-Animados-Animales/Imagenes-Aves/Tucan/Bebe-Tucan-68959.gif"></Image>
-</StackLayout>
+
 
 		<StackLayout horizontalAlignment="center" verticalAlignment="center">
 		<Image [src]="picture" width="200" height="200"></Image>
 
-	
+		<Label text="Etiqueta:" class="input"></Label>
+		<TextField [(ngModel)]="imagen.etiqueta"  class="inputfield"></TextField>
 
-	<Button text="Take Picture" [nsRouterLink]="['/takePicture']"  class="btnhome"></Button>
-	<Button text="Show Picture" [nsRouterLink]="['/showImages']"  class="btnhome"></Button>
+		<Button text="Capture" (tap)="getCameraPermission()" class="btnprimary"></Button>
+		<Button text="SUBIR" (tap)="subirFoto()" class="btnprimary"></Button>
 
 	</StackLayout>
 <!-- 
