@@ -1,18 +1,27 @@
 <ActionBar class="action-bar" backgroud>
 	<StackLayout orientation="horizontal" horizontalAlignment="right">
-		<Label text="Cristian Carreño" class="action-label"></Label>
+		<Label text="SHOW IMAGES" class="action-label"></Label>
 	</StackLayout>
 </ActionBar>
 
 
+<StackLayout class="header">
+	<Image class="logo" src="~/app/images/logoTucan.png"></Image>
+</StackLayout>
 
 
-	<StackLayout class="header">
-		<Label class="namepag" text="*SHOW IMAGES*"></Label>
-		<Image class="logo" src="~/app/images/logoTucan.png"></Image>
-	</StackLayout>
+<StackLayout horizontalAlignment="center" verticalAlignment="center">
+	<Image [src]="picture" width="200" height="200"></Image>
+</StackLayout>-->
 
+<stacklayout>
+	<ScrollView orientation="vertical">
+		<stacklayout>
+			<stacklayout *ngFor="let foto1 of fotos;">	
+				<Image [src]="'https://cristiancarrenavarro.000webhostapp.com' + foto1[0]" stretch="aspectFit"></Image>
+				<Label [text]="foto1[1]" stretch="aspectFit"></Label>
+			</stacklayout>
+		</stacklayout>
+	</ScrollView>
+</stacklayout>
 
-		<StackLayout horizontalAlignment="center" verticalAlignment="center">
-        <Image [src]="picture" width="200" height="200"></Image>
-    </StackLayout>

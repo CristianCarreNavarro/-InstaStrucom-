@@ -36,6 +36,11 @@ export class Service1 {
         return this.http.post(server, usuario, { headers: this.createRequestHeader() });
         
     }
+   getFoto() {
+        let server = "https://cristiancarrenavarro.000webhostapp.com/getFoto.php";
+        return this.http.get(server,  { headers: this.createRequestHeader() });
+        
+    }
     enviar64(base64image) {
         console.log("Upload base64:");
         console.log(base64image);

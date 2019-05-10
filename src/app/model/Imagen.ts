@@ -3,6 +3,7 @@ export class Imagen {
     
     public    etiqueta: string;
     public    coordenadas: string;
+    
     public  base64;
        constructor( url="",base64="",etiqueta:string="",coordenadas:string=""){
         
@@ -11,7 +12,5 @@ export class Imagen {
            this.etiqueta = etiqueta;
            this.coordenadas = coordenadas;
        }
-   
-   
-   
+
    }

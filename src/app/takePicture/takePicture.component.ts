@@ -85,7 +85,7 @@ this.imagen.coordenadas="coordenada51ycoordenada214";
 
         console.log("funciona")
         console.log(respuesta["creador"])
-
+        this.alert("Foto subida");
       } else {
         //"poner un toast en el movil"
         console.log("error to send image64")
